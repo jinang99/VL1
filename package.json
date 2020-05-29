@@ -1,0 +1,16 @@
+{
+  "name": "tp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d VL1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://jinang99.github.io/VL1",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
