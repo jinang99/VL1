@@ -1,0 +1,48 @@
+<!-- The library is included in this pen's javascript settings, but the following is also possible: -->
+<script src="D:/Jinang/Vlabs/d3ML/lib/d3ml.js"></script>
+<!-- <script src="./abc.js"></script> -->
+<body>
+<h1 class="center">K-Nearest Neighbor (KNN)</h1>
+<p class="center"><strong>A usage example of the <a href="https://github.com/StefanieStoppel/d3ML" target="_blank" title="d3ML repository on GitHub">d3ML</a> javascript library.</strong></p>
+<link rel="stylesheet" type="text/css" href="abc.css">
+<p class="center">Click on the grey area to create new circles and see how their color changes based on their neighbors.</p>
+<script>
+  const displayWidth = window.innerWidth - 25;
+const displayHeight = 450;
+const dataSetSize = 250;
+const options = {
+  rootNode: '#knn',
+  width: displayWidth,
+  height: displayHeight,
+  backgroundColor: 'black',
+  circleFill: '#3fe4h2',
+  circleStroke: 'white' 
+};
+const types = ['A', 'B'];
+
+document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+      rootNode: 'body',
+      backgroundColor: 'black',
+      circleFill: 'grey',
+      circleStroke: 'white'
+    };
+    const types = ['A', 'B'];
+    const data = [
+      { x: 25, y: 36, type: 'A' },
+      { x: 56, y: 73, type: 'A' },
+      { x: 65, y: 135, type: 'B' },
+      { x: 75, y: 103, type: 'A' },
+      { x: 173, y: 64, type: 'B' },
+      { x: 44, y: 122, type: 'A' },
+      { x: 47, y: 38, type: 'B' },
+      { x: 346, y: 10, type: 'B' },
+      // { x: 23, y: 52, type: 'B' },
+      // { x: 346, y: 410, type: 'A' }
+    ];
+
+    const vis = new d3ml.KNNVisualization(data, options, types, 3);
+    vis.draw();
+  });
+</script>
+</body>
